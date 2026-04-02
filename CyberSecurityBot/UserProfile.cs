@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CyberSecurityBot
 {
-    internal class UserProfile
+    public class UserProfile
     {
+        public string Name { get; set; }
+        public int MessageCount { get; set; }
+        public string LastTopic { get; set; }   
+
+        //Constroctor
     }
 }
