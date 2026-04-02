@@ -13,5 +13,13 @@ namespace CyberSecurityBot
         public string LastTopic { get; set; }   
 
         //Constroctor
+        public UserProfile(string name)
+        {
+            Name = name;
+            MassageCount = 0;
+            LastTopic = " None";
+
+
+        }
     }
 }
