@@ -7,7 +7,7 @@ using static System.Console;
 using System.Speech.Synthesis;
 namespace CyberSecurityBot
 {
-    public static void AudioPlayer
+    public static class AudioPlayer
 
     {
 public static void playgreeting()
@@ -20,7 +20,13 @@ public static void playgreeting()
             // for setting the volume
             synthesizer.Volume = 100;
             // The welcoming voice over
-		
-    }
-    }
+            synthesizer.Speak("Hello ! Welcome to the Cybersecurity Awereness Bot. I am here to help you stay safe online.");
+}
+        catch(Exception ex)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine(" Audio coluld not play the welcoming " + ex.Message);
+            Console.ResetColor();
+        }
+  }
 }
