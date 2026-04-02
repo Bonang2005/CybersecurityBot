@@ -42,14 +42,45 @@ namespace CyberSecurityBot
             foreach (char c in massage)// for the typing effect
             {
                 Console.Write(c);
-                Thread.Sleep(15);// is the milliseconf between each charecter its a pause between each
+                Thread.Sleep(15);// is the millisecond between each charecter its a pause between each
 
             }
             Console.WriteLine();
             Console.ResetColor();
 
         }
-        //
+        public static void ShowDivider()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("----------------------------------------");
+            Console.ResetColor();
+        }
+        public static void ShowError(string message)
+        {
+            Console.ForegroundColor= ConsoleColor.Red;
+            System.Console.WriteLine("{ message}");
+            Console.ResetColor();
+        }
+        public static void ShowExit(UserProfile user)
+        
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor . DarkGreen;
+            Console.WriteLine("==========================================================");
+            Console.WriteLine("             SESSION SUMMARY              ");
+            Console.WriteLine("==========================================================");
+            Console.WriteLine("    Name        : {user.Name}".PadRight(44) + ".");
+            Console.WriteLine("    Messages    : {user.MessageCount}".PadRight(44) + ".");
+            Console.WriteLine("    Last Topic  : {user.LastTopic}".PadRight(44) + ".");
+            Console.WriteLine("==========================================================");
+            Console.WriteLine("    REMEMBER, ALWAYS BE CAUTIOUS ONLINE !!");
+            Console.WriteLine(" ========================================================== ");
+            Console.ResetColor();
+
+
+
+        }
+
         }
     }
 
