@@ -7,6 +7,8 @@ using static System.Console;
 using System.Speech.Synthesis;
 namespace CyberSecurityBot
 {
+
+}
     public static class AudioPlayer
 
     {

@@ -17,7 +17,7 @@ namespace CyberSecurityBot
             UserProfile user = new UserProfile(name);
             bool running = true;
 
-            while (!running) {
+            while (running) {
                 Display.ShowDivider();
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine(user.Name);
@@ -44,7 +44,7 @@ namespace CyberSecurityBot
                 //Exiting code
                 if (lowerInput == "exit")
                 {
-                    Display.Chat("Goodbye, " + user, name + ". Stay Safe Online", ConsoleColor.DarkYellow);
+                    Display.Chat("Goodbye, " + user. Name + ". Stay Safe Online", ConsoleColor.DarkYellow);
                     Display.ShowExit(user); ;
                     running = false;
                 }
@@ -54,12 +54,12 @@ namespace CyberSecurityBot
                     Display.Chat(" I am running at full security capacity! How can I help you ?", ConsoleColor.White);
                 
                 }
-                else if(lowerInput.Contains("pusrpose")) || lowerInput.Contains("what do you do"))
-
+                else if (lowerInput.Contains("purpose") || lowerInput.Contains("what do you do"))
+                {
+                    Display.Chat("I am a Cybersecurity Awareness Bot! I help you learn about password safety, phishing, safe browsing and privacy.", ConsoleColor.White);
                 }
-            Display.Chat("I am Cybersecurity Awareness Bot! I help learn about safety, safe browsing and privacy." , ConsoleColor.White);
 
-         else if (lowerInput.Contains("purpose") || lowerInput.Contains("what do you do"))
+                else if (lowerInput.Contains("purpose") || lowerInput.Contains("what do you do"))
             {
                 Display.Chat("I am a Cybersecurity Awareness Bot! I help you learn about password safety, phishing, safe browsing and privacy.", ConsoleColor.White);
             }

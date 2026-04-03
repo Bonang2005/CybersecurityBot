@@ -1,27 +1,29 @@
-﻿using System;
+﻿using CyberSecurityBot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
-using CyberSecurityBot;
+using System.Speech.Synthesis;
 
 
-    AudioPlayer.PlayGreeting();
+AudioPlayer.PlayGreeting();
     Display.ShowLogo();
-    Console.writeLine("Enter you name:");
+    Console.WriteLine("Enter you name:");
     string name = Console.ReadLine();
-    
-    while(string.IsNull(name))
-        {
-        Console.ForegroundColor = ConsoleColor.red;
-        Console.writeLine("Please enter your name.");
-        Console.ResetColor();
-        Console.Write("Enter You name:");
-        name = Console.ReadLine();
+
+while (string.IsNullOrEmpty(name))
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Please enter your name.");
+    Console.ResetColor();
+    Console.Write("Enter You name:");
+    name = Console.ReadLine();
+}
     
 
-name of = char.ToUpper(nameof[0]) + nameof.Substring(1).ToLower();
+name  = char.ToUpper(name[0]) + name.Substring(1).ToLower();
 
 //Show the welcome message
 Display.ShowWelcome(name);

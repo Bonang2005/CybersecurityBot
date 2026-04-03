@@ -16,7 +16,7 @@ namespace CyberSecurityBot
         public UserProfile(string name)
         {
             Name = name;
-            MassageCount = 0;
+            MessageCount = 0;
             LastTopic = " None";
 
 

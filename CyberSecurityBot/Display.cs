@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using static System.Console;
 
@@ -39,7 +40,7 @@ namespace CyberSecurityBot
             System.Console.ForegroundColor = ConsoleColor.Green;
             System.Console.WriteLine(" [CyberBot]" );
             Console.ForegroundColor = colour; 
-            foreach (char c in massage)// for the typing effect
+            foreach (char c in message)// for the typing effect
             {
                 Console.Write(c);
                 Thread.Sleep(15);// is the millisecond between each charecter its a pause between each
